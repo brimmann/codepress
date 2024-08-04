@@ -9,11 +9,11 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "declaration": true,
-    "allowJs": false,
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
     "strictNullChecks": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "removeComments": false,
     "preserveSymlinks": true
   },

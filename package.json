@@ -8,7 +8,7 @@
     "vitepress": "bin/vitepress.js"
   },
   "scripts": {
-    "dev": "tsc -w -p ."
+    "dev": "tsc -p ."
   },
   "keywords": [
     "vite",
