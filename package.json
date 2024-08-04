@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "vitepress": "bin/vitepress.js"
+    "codepress": "bin/codepress.js"
   },
   "scripts": {
     "dev": "tsc -p ."

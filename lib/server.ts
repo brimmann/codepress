@@ -9,6 +9,7 @@ const debug = require('debug')('codepress')
 
 const CodePressPlugin: Plugin = ({root, app}) => {
     app.use(async (ctx, next) => {
+        debug(`current path: ${ctx.path}`)
         if(ctx.path.startsWith('/@app')) {
             const file = ctx.path.replace(/^\/@app\/?/, '')
             ctx.type = path.extname(file)
