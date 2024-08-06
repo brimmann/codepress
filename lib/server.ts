@@ -1,7 +1,6 @@
 import path from 'path'
 import { Plugin, createServer as createViteServer, Resolver, cachedRead } from 'vite'
 import { markdownToVue } from './markdown'
-import { promises as fs } from 'fs'
 
 const debug = require('debug')('codepress')
 
@@ -42,7 +41,7 @@ const CodePressPlugin: Plugin = ({ app, root, watcher, resolver }) => {
   // hot reload .md files as .vue files
   watcher.on('change', async (file) => {
     if (file.endsWith('.md')) {
-      const content = await fs.readFile(file, 'utf-8')
+      const content = await cachedRead(null, file)
       watcher.handleVueReload(file, Date.now(), markdownToVue(content))
     }
   })
