@@ -1,7 +1,6 @@
 import path from 'path'
 import { Plugin, createServer as createViteServer, Resolver, cachedRead } from 'vite'
 import { markdownToVue } from './markdown'
-import { promises as fs } from 'fs'
 
 const debug = require('debug')('codepress')
 
