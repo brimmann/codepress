@@ -8,7 +8,8 @@
     "codepress": "bin/codepress.js"
   },
   "scripts": {
-    "dev": "tsc -p ."
+    "dev": "tsc -p .",
+    "codepress": "npx codepress"
   },
   "keywords": [
     "vite",

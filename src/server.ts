@@ -1,6 +1,6 @@
 import path from 'path'
 import { Plugin, createServer as createViteServer, cachedRead } from 'vite'
-import { createMarkDownFn } from './markdownToVue'
+import { createMarkdownFn } from './markdownToVue'
 import {APP_PATH, THEME_PATH, CodePressResolver} from "./resolver"
 
 const debug = require('debug')('codepress')
@@ -9,7 +9,7 @@ const debug = require('debug')('codepress')
 
 
 const CodePressPlugin: Plugin = ({ app, root, watcher, resolver }) => {
-  const markdownToVue = createMarkDownFn(root)
+  const markdownToVue = createMarkdownFn(root)
   // watch theme file if it's outside the project root
   debug(`root: ${root} and watcher:${watcher}`)
   if (path.relative(root, THEME_PATH).startsWith('..')) {
